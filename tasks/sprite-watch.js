@@ -1,5 +1,5 @@
 /*
- * grunt-sprite-watch
+ * grunt-spritegen-sheets
  * 
  *
  * Copyright (c) 2015 Spencer Leopold <spencer.leopold@gmail.com>
@@ -8,10 +8,10 @@
 
 'use strict';
 
-var spriteWatch = require('sprite-watch');
+var spritegenSheets = require('spritegen-sheets');
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('sprite_watch', 'Use sprite-watch with grunt.', function() {
+  grunt.registerMultiTask('spritegen_sheets', 'Use spritegen-sheets with grunt.', function() {
 
     var self = this;
     var _ = grunt.util._;
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       watch: false
     });
 
-    var sprites = spriteWatch(options);
+    var sprites = spritegenSheets(options);
     sprites.start().then(function() {
       if (!options.watch) {
         done();
