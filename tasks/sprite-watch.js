@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     var done = _.once(self.async());
 
     var options = this.options({
-      padding: 0,
+      padding: 25,
       algorithm: 'top-down',
       engine: 'pixelsmith',
       sheetOutput: 'css',
