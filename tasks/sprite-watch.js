@@ -16,22 +16,12 @@ module.exports = function(grunt) {
     var self = this;
     var _ = grunt.util._;
     var done = _.once(self.async());
-
-    var options = this.options({
-      padding: 25,
-      algorithm: 'top-down',
-      engine: 'pixelsmith',
-      sheetOutput: 'css',
-      sheetFormat: 'css',
-      sheetTemplate: true,
-      watch: false
-    });
+    var options = this.options();
+    var logger = grunt.log;
+    logger.log = logger.writeln; // alias grunt's .write to .log
+    options.logger = logger;
 
     var sprites = spritegenSheets(options);
-    sprites.start().then(function() {
-      if (!options.watch) {
-        done();
-      }
-    });
+    sprites.start().then(done);
   });
 };
