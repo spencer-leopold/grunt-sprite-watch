@@ -1,7 +1,7 @@
 {
   "name": "grunt-spritegen-sheets",
   "description": "Use spritegen-sheets with grunt.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "",
   "author": {
     "name": "Spencer Leopold",
@@ -27,7 +27,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "spritegen-sheets": "^1.0.1"
+    "spritegen-sheets": "^1.0.6"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.9.2",
